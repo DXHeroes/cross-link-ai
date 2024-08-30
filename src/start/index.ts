@@ -6,8 +6,6 @@ import { openai } from "@ai-sdk/openai";
 import fs from "fs/promises";
 import path from "path";
 import crypto from "crypto";
-import pLimit from "p-limit";
-import { encode, encodeChat } from "gpt-tokenizer";
 
 function filterUrls(urls: string[], filter?: string): string[] {
   if (!filter) return urls;
@@ -58,12 +56,13 @@ export default async function start({
     // save the intersections to a CSV file
     await fs.writeFile(
       path.join(process.cwd(), "./intersections.csv"),
-      sortedIntersections
-        .map(
+      [
+        "Link From;Link From Text;Link To;Link Score;Link To Reason",
+        ...sortedIntersections.map(
           (intersection) =>
-            `${intersection.linkFrom},${intersection.linkTo},${intersection.linkText}`,
-        )
-        .join("\n"),
+            `${intersection.linkFrom};${intersection.linkFromText};${intersection.linkTo};${intersection.linkScore};${intersection.linkToReason}`,
+        ),
+      ].join("\n"),
     );
 
     // list all intersections in a table with chalk
@@ -171,6 +170,13 @@ const getMainContent = async (url: string): Promise<string> => {
 };
 
 type Content = Awaited<ReturnType<typeof getContentFromHtml>>;
+type Intersection = {
+  linkFrom: string;
+  linkFromText: string;
+  linkTo: string;
+  linkToReason: string;
+  linkScore: number;
+}[];
 
 const findIntersections = async (
   myContent: Content[],
@@ -179,7 +185,7 @@ const findIntersections = async (
   const cacheDir = path.join(process.cwd(), "tmp", "intersections");
   await fs.mkdir(cacheDir, { recursive: true });
 
-  const intersections = [];
+  const intersections: Intersection[] = [];
   const batchSize = 50;
 
   for (let i = 0; i < myContent.length; i += batchSize) {
@@ -266,5 +272,5 @@ const findIntersections = async (
     );
   }
 
-  return intersections;
+  return intersections.flat();
 };

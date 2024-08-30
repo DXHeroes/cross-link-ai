@@ -2,6 +2,8 @@ node_modules/
 dist/
 tmp/
 
+intersections.csv
+
 .DS_Store
 .env
 .env.local
