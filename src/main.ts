@@ -13,8 +13,25 @@ program
   .description("Start the linking opportunities process")
   .requiredOption("-m, --my <url>", "Your Sitemap URL")
   .requiredOption("-s, --sitemap <url>", "URL to the sitemap file")
-  .action(async (params: { my: string; sitemap: string }) => {
-    await start({ mySitemap: params.my, sitemap: params.sitemap });
-  });
+  .option("-f, --my-filter <regex>", "Regex to filter paths for your sitemap")
+  .option(
+    "-g, --sitemap-filter <regex>",
+    "Regex to filter paths for the other sitemap",
+  )
+  .action(
+    async (params: {
+      my: string;
+      sitemap: string;
+      myFilter?: string;
+      sitemapFilter?: string;
+    }) => {
+      await start({
+        mySitemap: params.my,
+        sitemap: params.sitemap,
+        myFilter: params.myFilter,
+        sitemapFilter: params.sitemapFilter,
+      });
+    },
+  );
 
 program.parse();
