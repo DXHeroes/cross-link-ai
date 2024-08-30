@@ -1737,6 +1737,13 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
+gpt-tokenizer@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gpt-tokenizer/-/gpt-tokenizer-2.2.1.tgz#195edebcc60b20c76f25075ffc87cb6b74cbdf3f"
+  integrity sha512-JYvLWTpPtFGz7eS7uixHslv3L96zka0n18MlQeH5YVl5F6mNhssxzSBTeqwNfW8A0AQIMYEaOfbSr+MaoCUvpg==
+  dependencies:
+    rfc4648 "^1.5.2"
+
 graceful-fs@^4.1.2, graceful-fs@^4.2.11, graceful-fs@^4.2.4:
   version "4.2.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
@@ -2236,6 +2243,13 @@ p-limit@^5.0.0:
   dependencies:
     yocto-queue "^1.0.0"
 
+p-limit@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-6.1.0.tgz#d91f9364d3fdff89b0a45c70d04ad4e0df30a0e8"
+  integrity sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==
+  dependencies:
+    yocto-queue "^1.1.1"
+
 p-locate@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
@@ -2461,6 +2475,11 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+
+rfc4648@^1.5.2:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/rfc4648/-/rfc4648-1.5.3.tgz#e62b81736c10361ca614efe618a566e93d0b41c0"
+  integrity sha512-MjOWxM065+WswwnmNONOT+bD1nXzY9Km6u3kzvnx8F8/HXGZdz3T6e6vZJ8Q/RIMUSp/nxqjH3GwvJDy8ijeQQ==
 
 rollup@^4.20.0:
   version "4.21.2"
@@ -3085,7 +3104,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-yocto-queue@^1.0.0:
+yocto-queue@^1.0.0, yocto-queue@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-1.1.1.tgz#fef65ce3ac9f8a32ceac5a634f74e17e5b232110"
   integrity sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==
