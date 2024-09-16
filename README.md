@@ -22,13 +22,15 @@ This project is a CLI tool designed to find linking opportunities between websit
 
 To start the linking opportunities process, use the following command:
 ```
-OPENAI_API_KEY=YOUR_OPENAI_API_KEY npx cross-link-ai start -m [your-sitemap-url] -s [target-sitemap-url] -f [your-sitemap-filter] -g [target-sitemap-filter]
+export OPENAI_API_KEY=YOUR_OPENAI_API_KEY && 
+npx cross-link-ai start -m [your-sitemap-url] -s [target-sitemap-url] -f [your-sitemap-filter] -g [target-sitemap-filter]
 ```
 
 ### Example
 
 ```bash
-OPENAI_API_KEY=YOUR_OPENAI_API_KEY npx cross-link-ai start -m https://dxheroes.io/sitemap.xml -s https://developerexperience.io/sitemap.xml --my-filter "/blog/" --sitemap-filter "articles/"
+export OPENAI_API_KEY=YOUR_OPENAI_API_KEY && 
+npx cross-link-ai start -m https://dxheroes.io/sitemap.xml -s https://developerexperience.io/sitemap.xml --my-filter "/blog/" --sitemap-filter "articles/"
 ```
 
 Replace `[your-sitemap-url]` with the URL of your sitemap and `[target-sitemap-url]` with the URL of the sitemap you want to compare against.
