@@ -1,4 +1,6 @@
-# cross-link-ai - Find linking opportunities between two sitemaps using AI
+# cross-link-ai
+
+Find linking opportunities between two sitemaps using AI
 
 This project is a CLI tool designed to find linking opportunities between websites using AI-powered content analysis.
 
