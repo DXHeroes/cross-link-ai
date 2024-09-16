@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/DXHeroes/cross-link-ai/compare/v0.3.0...v0.4.0) (2024-09-16)
+
+
+### Bug Fixes
+
+* binaries to run ([f4dfb5d](https://github.com/DXHeroes/cross-link-ai/commit/f4dfb5d0a03f219b7911b579257a256b1108000b))
+
 ## [0.3.0](https://github.com/DXHeroes/cross-link-ai/compare/v0.2.0...v0.3.0) (2024-09-16)
 
 
