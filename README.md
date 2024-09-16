@@ -7,6 +7,7 @@ This project is a CLI tool designed to find linking opportunities between websit
 - Fetch and parse sitemaps
 - Extract main content from web pages
 - Analyze content using AI to identify keywords and titles
+  - Uses `gpt-4o-mini` model from `ai` Vercel SDK
 - Compare content across different websites to find linking opportunities
 
 ## Prerequisites
@@ -29,6 +30,8 @@ This project is a CLI tool designed to find linking opportunities between websit
    npm install
    ```
 
+3. Create `.env` file with `OPENAI_API_KEY`. See `.env.example` for more info.
+
 ## Usage
 
 To start the linking opportunities process, use the following command:
@@ -38,7 +41,28 @@ yarn start -- start -m [your-sitemap-url] -s [target-sitemap-url]
 npm start -- start -m [your-sitemap-url] -s [target-sitemap-url]
 ```
 
+### Example
+
+```bash
+yarn start -- start -m https://dxheroes.io/sitemap.xml --my-filter "/blog/" -s https://developerexperience.io/sitemap.xml --sitemap-filter "articles/"
+```
+
 Replace `[your-sitemap-url]` with the URL of your sitemap and `[target-sitemap-url]` with the URL of the sitemap you want to compare against.
+
+### Options
+
+```bash
+Usage: linking-opportunities start [options]
+
+Start the linking opportunities process
+
+Options:
+  -m, --my <url>                Your Sitemap URL
+  -s, --sitemap <url>           URL to the target sitemap file
+  -f, --my-filter <regex>       Regex to filter paths for your sitemap
+  -g, --sitemap-filter <regex>  Regex to filter paths for the other sitemap
+  -h, --help                    display help for command
+```
 
 ## Scripts
 
@@ -103,9 +127,9 @@ The output will be in the `dist/` directory.
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some Amazing Feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## License

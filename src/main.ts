@@ -12,7 +12,7 @@ program
   .command("start")
   .description("Start the linking opportunities process")
   .requiredOption("-m, --my <url>", "Your Sitemap URL")
-  .requiredOption("-s, --sitemap <url>", "URL to the sitemap file")
+  .requiredOption("-s, --sitemap <url>", "URL to the target sitemap file")
   .option("-f, --my-filter <regex>", "Regex to filter paths for your sitemap")
   .option(
     "-g, --sitemap-filter <regex>",
