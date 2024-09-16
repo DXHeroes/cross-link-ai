@@ -16,37 +16,19 @@ This project is a CLI tool designed to find linking opportunities between websit
 
 - Node.js (v20.15.0 or later)
 - yarn or npm
-
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/dxheroes/cross-link-ai
-   cd cross-link-ai
-   ```
-
-2. Install dependencies:
-   ```
-   yarn install
-   # or
-   npm install
-   ```
-
-3. Create `.env` file with `OPENAI_API_KEY`. See `.env.example` for more info.
+- OpenAI API key (you can use [OpenAI API Playground](https://platform.openai.com/playground) to get one)
 
 ## Usage
 
 To start the linking opportunities process, use the following command:
 ```
-yarn start -- start -m [your-sitemap-url] -s [target-sitemap-url]
-# or
-npm start -- start -m [your-sitemap-url] -s [target-sitemap-url]
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY npx cross-link-ai start -m [your-sitemap-url] -s [target-sitemap-url] -f [your-sitemap-filter] -g [target-sitemap-filter]
 ```
 
 ### Example
 
 ```bash
-yarn start -- start -m https://dxheroes.io/sitemap.xml --my-filter "/blog/" -s https://developerexperience.io/sitemap.xml --sitemap-filter "articles/"
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY npx cross-link-ai start -m https://dxheroes.io/sitemap.xml -s https://developerexperience.io/sitemap.xml --my-filter "/blog/" --sitemap-filter "articles/"
 ```
 
 Replace `[your-sitemap-url]` with the URL of your sitemap and `[target-sitemap-url]` with the URL of the sitemap you want to compare against.
@@ -95,12 +77,24 @@ For a full list of dependencies, refer to the `package.json` file.
 
 ## Development
 
-1. Make sure you're using the correct Node.js version:
+## Installation
+
+1. Clone the repository:
    ```
-   nvm use
+   git clone https://github.com/dxheroes/cross-link-ai
+   cd cross-link-ai
    ```
 
-2. Start the development server:
+2. Install dependencies:
+   ```
+   yarn install
+   # or
+   npm install
+   ```
+
+3. Create `.env` file with `OPENAI_API_KEY`. See `.env.example` for more info.
+
+4. Start the development server:
    ```
    yarn dev
    # or
@@ -108,7 +102,7 @@ For a full list of dependencies, refer to the `package.json` file.
    ```
 
 
-3. Format code before committing:
+5. Format code before committing:
    ```
    yarn format
    # or
