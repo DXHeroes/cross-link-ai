@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/DXHeroes/cross-link-ai/compare/v0.2.0...v0.3.0) (2024-09-16)
+
+
+### Miscellaneous Chores
+
+* add missing types ([fe3543b](https://github.com/DXHeroes/cross-link-ai/commit/fe3543b8da04634e15fd7d130bd72913dad390c4))
+
 ## 0.2.0 (2024-09-16)
 
 
