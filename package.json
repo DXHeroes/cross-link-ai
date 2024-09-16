@@ -1,7 +1,7 @@
 {
-  "name": "linking-opportunities",
+  "name": "cross-link-ai",
   "version": "0.1.0",
-  "description": "",
+  "description": "Find cross-links between two sitemaps",
   "main": "./src/main.ts",
   "scripts": {
     "start": "tsx ./src/main.ts",

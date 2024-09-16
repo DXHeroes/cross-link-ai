@@ -1,4 +1,4 @@
-# Linking Opportunities Finder using AI
+# cross-link-ai - Find linking opportunities between two sitemaps using AI
 
 This project is a CLI tool designed to find linking opportunities between websites using AI-powered content analysis.
 
@@ -19,8 +19,8 @@ This project is a CLI tool designed to find linking opportunities between websit
 
 1. Clone the repository:
    ```
-   git clone https://github.com/dxheroes/linking-opportunities
-   cd linking-opportunities
+   git clone https://github.com/dxheroes/cross-link-ai
+   cd cross-link-ai
    ```
 
 2. Install dependencies:
@@ -52,9 +52,9 @@ Replace `[your-sitemap-url]` with the URL of your sitemap and `[target-sitemap-u
 ### Options
 
 ```bash
-Usage: linking-opportunities start [options]
+Usage: cross-link-ai start [options]
 
-Start the linking opportunities process
+Start the intelligent linking opportunities process
 
 Options:
   -m, --my <url>                Your Sitemap URL
