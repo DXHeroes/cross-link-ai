@@ -2,17 +2,19 @@
   "name": "cross-link-ai",
   "version": "0.3.0",
   "description": "Find cross-links between two sitemaps",
-  "main": "./src/main.ts",
+"main": "./dist/bin.js",
   "scripts": {
     "start": "tsx ./src/main.ts",
     "build": "webpack",
+    "build:cli": "webpack && chmod +x ./dist/bin.js && npm link",
     "dev": "tsx watch ./src/main.ts",
     "test": "vitest run",
     "test:watch": "vitest .",
     "format": "prettier --write ."
   },
-  "bin": "./src/main.ts",
-  "keywords": [],
+  "bin": {
+    "cross-link-ai": "./dist/bin.js"
+  },  "keywords": [],
   "author": "Prokop Simek <prokop.simek@dxheroes.io>",
   "license": "MIT",
   "dependencies": {
